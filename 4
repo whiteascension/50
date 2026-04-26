@@ -1,0 +1,13 @@
+mkdir speedrun100 && cd speedrun100
+git init
+git checkout -b main
+
+for i in {1..100}
+do
+  echo "line $i - $(date +%s%N)" >> grind.txt
+  git add grind.txt
+  git commit -m "commit $i" --quiet
+done
+
+git remote add origin https://github.com/USERNAME/REPO.git
+git push -u origin main
