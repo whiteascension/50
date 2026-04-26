@@ -1,0 +1,8 @@
+mkdir test-repo && cd test-repo
+git init
+
+for i in {1..100}; do
+  echo "$i $(date +%s%N)" >> log.txt
+  git add log.txt
+  git commit -m "commit $i" --quiet
+done
