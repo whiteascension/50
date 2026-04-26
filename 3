@@ -1,0 +1,1 @@
+seq 100 | xargs -I{} sh -c 'echo "{} $(date +%s%N)" >> log.txt && git add log.txt && git commit -m "commit {}" --quiet'
