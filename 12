@@ -1,0 +1,4 @@
+echo 'print("Hello GitHub")' > main.py
+git add .
+git commit -m "add runnable script"
+git push
